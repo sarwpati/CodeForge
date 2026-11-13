@@ -3,7 +3,7 @@
   <p><strong>A highly scalable, full-stack coding platform to practice algorithms and ace your interviews.</strong></p>
 
   <p>
-    <a href="https://code-forge-brown.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-code--forge--brown.vercel.app-blue?style=for-the-badge&logo=vercel" alt="Live Demo" /></a>
+    <a href="https://code-forge-one-bay.vercel.app/"><img src="https://img.shields.io/badge/Live%20Demo-code--forge--brown.vercel.app-blue?style=for-the-badge&logo=vercel" alt="Live Demo" /></a>
     <img src="https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge" alt="Build Status" />
     <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License" />
   </p>
