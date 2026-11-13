@@ -19,7 +19,7 @@
 
 ## 📸 Demo
 
-> **Live Demo:** [code-forge-brown.vercel.app](https://code-forge-brown.vercel.app/)
+> **Live Demo:** [code-forge-one-bay.vercel.app](https://code-forge-one-bay.vercel.app/)
 
 *(To display these screenshots properly, please save the images into the `docs/images/` directory)*
 
