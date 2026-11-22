@@ -1,0 +1,1712 @@
+[
+  {
+    "title": "Find the Largest Number",
+    "difficulty": "easy",
+    "description": "Read N integers and print the largest. Input: N followed by N integers.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;\n//code here\nint ans=a[0]; for(int v:a) if(v>ans) ans=v; cout<<ans;\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();\n//code here\nint ans=a[0];for(int v:a)if(v>ans)ans=v;System.out.print(ans);\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));\n//code here\nfunction solve(){let ans=a[0];for(const x of a)if(x>ans)ans=x;return String(ans);}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "5\n3 9 2 7 1",
+        "output": "9",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "1\n-4",
+        "output": "-4",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "4\n-8 -2 -9 -5",
+        "output": "-2",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "2\n1 2",
+        "output": "2"
+      },
+      {
+        "input": "3\n-1 -5",
+        "output": "-1"
+      },
+      {
+        "input": "4\n0 0 0 0",
+        "output": "0"
+      },
+      {
+        "input": "5\n10 11 12 13 14",
+        "output": "14"
+      },
+      {
+        "input": "2\n-100 -3",
+        "output": "-3"
+      },
+      {
+        "input": "3\n7 7 7",
+        "output": "7"
+      },
+      {
+        "input": "4\n8 2 4 6",
+        "output": "8"
+      },
+      {
+        "input": "1\n0",
+        "output": "0"
+      },
+      {
+        "input": "3\n-3 0 -2",
+        "output": "0"
+      },
+      {
+        "input": "6\n1 9 2 8 3 7",
+        "output": "9"
+      }
+    ],
+    "tags": [
+      "Basics"
+    ]
+  },
+  {
+    "title": "Reverse an Array",
+    "difficulty": "easy",
+    "description": "Read N integers and print them in reverse order separated by spaces.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;\n//code here\nfor(int i=n-1;i>=0;i--){if(i!=n-1)cout<<\" \";cout<<a[i];}\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();\n//code here\nfor(int i=n-1;i>=0;i--){if(i<n-1)System.out.print(\" \");System.out.print(a[i]);}\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));\n//code here\nfunction solve(){return a.slice().reverse().join(' ');}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "4\n1 2 3 4",
+        "output": "4 3 2 1",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "1\n7",
+        "output": "7",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "3\n-1 0 5",
+        "output": "5 0 -1",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "2\n9 1",
+        "output": "1 9"
+      },
+      {
+        "input": "3\n1 1 2",
+        "output": "2 1 1"
+      },
+      {
+        "input": "5\n0 1 2 3 4",
+        "output": "4 3 2 1 0"
+      },
+      {
+        "input": "4\n-1 -2 -3 -4",
+        "output": "-4 -3 -2 -1"
+      },
+      {
+        "input": "1\n0",
+        "output": "0"
+      },
+      {
+        "input": "6\n2 4 6 8 10 12",
+        "output": "12 10 8 6 4 2"
+      },
+      {
+        "input": "3\n9 8 7",
+        "output": "7 8 9"
+      },
+      {
+        "input": "2\n-5 5",
+        "output": "5 -5"
+      },
+      {
+        "input": "4\n3 3 3 3",
+        "output": "3 3 3 3"
+      },
+      {
+        "input": "5\n5 4 3 2 1",
+        "output": "1 2 3 4 5"
+      }
+    ],
+    "tags": [
+      "Arrays"
+    ]
+  },
+  {
+    "title": "Check Palindrome String",
+    "difficulty": "easy",
+    "description": "Read a single string without spaces. Print YES if it is a palindrome, otherwise NO.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nstring s;cin>>s;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nString s=sc.next();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst s=t[0];\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nstring s;cin>>s;\n//code here\nbool ok=true;for(int i=0;i<(int)s.size()/2;i++)if(s[i]!=s[s.size()-1-i])ok=false;cout<<(ok?\"YES\":\"NO\");\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nString s=sc.next();\n//code here\nboolean ok=true;for(int i=0;i<s.length()/2;i++)if(s.charAt(i)!=s.charAt(s.length()-1-i))ok=false;System.out.print(ok?\"YES\":\"NO\");\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst s=t[0];\n//code here\nfunction solve(){return s===s.split('').reverse().join('')?'YES':'NO';}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "level",
+        "output": "YES",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "hello",
+        "output": "NO",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "a",
+        "output": "YES",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "racecar",
+        "output": "YES"
+      },
+      {
+        "input": "abba",
+        "output": "YES"
+      },
+      {
+        "input": "abc",
+        "output": "NO"
+      },
+      {
+        "input": "aa",
+        "output": "YES"
+      },
+      {
+        "input": "ab",
+        "output": "NO"
+      },
+      {
+        "input": "noon",
+        "output": "YES"
+      },
+      {
+        "input": "madam",
+        "output": "YES"
+      },
+      {
+        "input": "xyzzyx",
+        "output": "YES"
+      },
+      {
+        "input": "abcd",
+        "output": "NO"
+      },
+      {
+        "input": "aabaa",
+        "output": "YES"
+      }
+    ],
+    "tags": [
+      "Strings"
+    ]
+  },
+  {
+    "title": "Print Multiplication Table",
+    "difficulty": "easy",
+    "description": "Read integer N. Print N times 1 through N times 10, separated by spaces.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst n=Number(t[0]);\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;\n//code here\nfor(int i=1;i<=10;i++){if(i>1)cout<<\" \";cout<<n*i;}\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();\n//code here\nfor(int i=1;i<=10;i++){if(i>1)System.out.print(\" \");System.out.print(n*i);}\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst n=Number(t[0]);\n//code here\nfunction solve(){return Array.from({length:10},(_,i)=>n*(i+1)).join(' ');}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "2",
+        "output": "2 4 6 8 10 12 14 16 18 20",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "1",
+        "output": "1 2 3 4 5 6 7 8 9 10",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "3",
+        "output": "3 6 9 12 15 18 21 24 27 30",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "0",
+        "output": "0 0 0 0 0 0 0 0 0 0"
+      },
+      {
+        "input": "4",
+        "output": "4 8 12 16 20 24 28 32 36 40"
+      },
+      {
+        "input": "5",
+        "output": "5 10 15 20 25 30 35 40 45 50"
+      },
+      {
+        "input": "6",
+        "output": "6 12 18 24 30 36 42 48 54 60"
+      },
+      {
+        "input": "7",
+        "output": "7 14 21 28 35 42 49 56 63 70"
+      },
+      {
+        "input": "8",
+        "output": "8 16 24 32 40 48 56 64 72 80"
+      },
+      {
+        "input": "9",
+        "output": "9 18 27 36 45 54 63 72 81 90"
+      },
+      {
+        "input": "10",
+        "output": "10 20 30 40 50 60 70 80 90 100"
+      },
+      {
+        "input": "-1",
+        "output": "-1 -2 -3 -4 -5 -6 -7 -8 -9 -10"
+      },
+      {
+        "input": "12",
+        "output": "12 24 36 48 60 72 84 96 108 120"
+      }
+    ],
+    "tags": [
+      "Loops"
+    ]
+  },
+  {
+    "title": "Check Even or Odd",
+    "difficulty": "easy",
+    "description": "Read integer N. Print Even if divisible by 2, otherwise Odd.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst n=Number(t[0]);\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;\n//code here\ncout<<(n%2==0?\"Even\":\"Odd\");\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();\n//code here\nSystem.out.print(n%2==0?\"Even\":\"Odd\");\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst n=Number(t[0]);\n//code here\nfunction solve(){return n%2===0?'Even':'Odd';}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "4",
+        "output": "Even",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "7",
+        "output": "Odd",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "0",
+        "output": "Even",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "1",
+        "output": "Odd"
+      },
+      {
+        "input": "2",
+        "output": "Even"
+      },
+      {
+        "input": "3",
+        "output": "Odd"
+      },
+      {
+        "input": "-1",
+        "output": "Odd"
+      },
+      {
+        "input": "-2",
+        "output": "Even"
+      },
+      {
+        "input": "99",
+        "output": "Odd"
+      },
+      {
+        "input": "100",
+        "output": "Even"
+      },
+      {
+        "input": "101",
+        "output": "Odd"
+      },
+      {
+        "input": "-101",
+        "output": "Odd"
+      },
+      {
+        "input": "-100",
+        "output": "Even"
+      }
+    ],
+    "tags": [
+      "Conditionals"
+    ]
+  },
+  {
+    "title": "Check Prime Number",
+    "difficulty": "easy",
+    "description": "Read integer N. Print YES if N is prime, otherwise NO.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst n=Number(t[0]);\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;\n//code here\nbool prime=n>=2;for(int i=2;i*i<=n;i++)if(n%i==0)prime=false;cout<<(prime?\"YES\":\"NO\");\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();\n//code here\nboolean prime=n>=2;for(int i=2;i*i<=n;i++)if(n%i==0)prime=false;System.out.print(prime?\"YES\":\"NO\");\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst n=Number(t[0]);\n//code here\nfunction solve(){if(n<2)return 'NO';for(let i=2;i*i<=n;i++)if(n%i===0)return 'NO';return 'YES';}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "7",
+        "output": "YES",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "9",
+        "output": "NO",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "1",
+        "output": "NO",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "2",
+        "output": "YES"
+      },
+      {
+        "input": "3",
+        "output": "YES"
+      },
+      {
+        "input": "4",
+        "output": "NO"
+      },
+      {
+        "input": "5",
+        "output": "YES"
+      },
+      {
+        "input": "11",
+        "output": "YES"
+      },
+      {
+        "input": "15",
+        "output": "NO"
+      },
+      {
+        "input": "17",
+        "output": "YES"
+      },
+      {
+        "input": "25",
+        "output": "NO"
+      },
+      {
+        "input": "29",
+        "output": "YES"
+      },
+      {
+        "input": "49",
+        "output": "NO"
+      }
+    ],
+    "tags": [
+      "Math"
+    ]
+  },
+  {
+    "title": "Bubble Sort",
+    "difficulty": "easy",
+    "description": "Read N and N integers. Sort in ascending order using bubble sort and print separated by spaces.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;\n//code here\nfor(int i=0;i<n;i++)for(int j=0;j<n-i-1;j++)if(a[j]>a[j+1])swap(a[j],a[j+1]);for(int i=0;i<n;i++){if(i)cout<<\" \";cout<<a[i];}\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();\n//code here\nfor(int i=0;i<n;i++)for(int j=0;j<n-i-1;j++)if(a[j]>a[j+1]){int t=a[j];a[j]=a[j+1];a[j+1]=t;}for(int i=0;i<n;i++){if(i>0)System.out.print(\" \");System.out.print(a[i]);}\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));\n//code here\nfunction solve(){const b=a.slice();for(let i=0;i<b.length;i++)for(let j=0;j<b.length-i-1;j++)if(b[j]>b[j+1]){let t=b[j];b[j]=b[j+1];b[j+1]=t;}return b.join(' ');}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "5\n5 1 4 2 3",
+        "output": "1 2 3 4 5",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "1\n9",
+        "output": "9",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "4\n-1 5 0 -3",
+        "output": "-3 -1 0 5",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "2\n2 1",
+        "output": "1 2"
+      },
+      {
+        "input": "3\n3 2 1",
+        "output": "1 2 3"
+      },
+      {
+        "input": "4\n4 1 3 2",
+        "output": "1 2 3 4"
+      },
+      {
+        "input": "5\n5 4 3 2 1",
+        "output": "1 2 3 4 5"
+      },
+      {
+        "input": "3\n1 1 1",
+        "output": "1 1 1"
+      },
+      {
+        "input": "4\n-2 4 0 -1",
+        "output": "-2 -1 0 4"
+      },
+      {
+        "input": "1\n0",
+        "output": "0"
+      },
+      {
+        "input": "2\n9 -9",
+        "output": "-9 9"
+      },
+      {
+        "input": "5\n2 3 2 1 3",
+        "output": "1 2 2 3 3"
+      },
+      {
+        "input": "6\n6 5 4 3 2 1",
+        "output": "1 2 3 4 5 6"
+      }
+    ],
+    "tags": [
+      "Sorting"
+    ]
+  },
+  {
+    "title": "Binary Search",
+    "difficulty": "easy",
+    "description": "Read N, N sorted integers, and target X. Print its zero-based index or -1 if absent.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;int x;cin>>x;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();int x=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));const x=Number(t[pos++]);\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;int x;cin>>x;\n//code here\nint l=0,r=n-1,ans=-1;while(l<=r){int m=(l+r)/2;if(a[m]==x){ans=m;break;}if(a[m]<x)l=m+1;else r=m-1;}cout<<ans;\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();int x=sc.nextInt();\n//code here\nint l=0,r=n-1,ans=-1;while(l<=r){int m=(l+r)/2;if(a[m]==x){ans=m;break;}if(a[m]<x)l=m+1;else r=m-1;}System.out.print(ans);\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));const x=Number(t[pos++]);\n//code here\nfunction solve(){let l=0,r=a.length-1;while(l<=r){let m=Math.floor((l+r)/2);if(a[m]===x)return String(m);if(a[m]<x)l=m+1;else r=m-1;}return '-1';}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "5\n1 3 5 7 9\n7",
+        "output": "3",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "3\n2 4 6\n5",
+        "output": "-1",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "1\n8\n8",
+        "output": "0",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "3\n1 2 3\n1",
+        "output": "0"
+      },
+      {
+        "input": "3\n1 2 3\n3",
+        "output": "2"
+      },
+      {
+        "input": "3\n1 2 3\n4",
+        "output": "-1"
+      },
+      {
+        "input": "4\n-3 -1 0 5\n0",
+        "output": "2"
+      },
+      {
+        "input": "4\n-3 -1 0 5\n-3",
+        "output": "0"
+      },
+      {
+        "input": "1\n9\n8",
+        "output": "-1"
+      },
+      {
+        "input": "1\n9\n9",
+        "output": "0"
+      },
+      {
+        "input": "5\n1 3 5 7 9\n5",
+        "output": "2"
+      },
+      {
+        "input": "5\n2 4 6 8 10\n10",
+        "output": "4"
+      },
+      {
+        "input": "5\n2 4 6 8 10\n1",
+        "output": "-1"
+      }
+    ],
+    "tags": [
+      "Searching"
+    ]
+  },
+  {
+    "title": "Pair Sum in Sorted Array",
+    "difficulty": "easy",
+    "description": "Read N, N sorted integers and target X. Print YES if two distinct positions sum to X, otherwise NO.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;int x;cin>>x;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();int x=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));const x=Number(t[pos++]);\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;int x;cin>>x;\n//code here\nint l=0,r=n-1;bool ok=false;while(l<r){int v=a[l]+a[r];if(v==x){ok=true;break;}if(v<x)l++;else r--;}cout<<(ok?\"YES\":\"NO\");\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();int x=sc.nextInt();\n//code here\nint l=0,r=n-1;boolean ok=false;while(l<r){int v=a[l]+a[r];if(v==x){ok=true;break;}if(v<x)l++;else r--;}System.out.print(ok?\"YES\":\"NO\");\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));const x=Number(t[pos++]);\n//code here\nfunction solve(){let l=0,r=a.length-1;while(l<r){let v=a[l]+a[r];if(v===x)return 'YES';if(v<x)l++;else r--;}return 'NO';}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "5\n1 2 4 6 9\n8",
+        "output": "YES",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "3\n1 3 5\n10",
+        "output": "NO",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "2\n4 4\n8",
+        "output": "YES",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "3\n1 2 3\n4",
+        "output": "YES"
+      },
+      {
+        "input": "3\n1 2 3\n6",
+        "output": "NO"
+      },
+      {
+        "input": "3\n1 2 3\n2",
+        "output": "NO"
+      },
+      {
+        "input": "4\n-2 -1 0 3\n1",
+        "output": "YES"
+      },
+      {
+        "input": "2\n5 5\n10",
+        "output": "YES"
+      },
+      {
+        "input": "2\n5 5\n9",
+        "output": "NO"
+      },
+      {
+        "input": "4\n1 4 6 9\n10",
+        "output": "YES"
+      },
+      {
+        "input": "4\n1 4 6 9\n12",
+        "output": "NO"
+      },
+      {
+        "input": "5\n0 0 1 1 2\n0",
+        "output": "YES"
+      },
+      {
+        "input": "5\n0 0 1 1 2\n4",
+        "output": "NO"
+      }
+    ],
+    "tags": [
+      "Two Pointers"
+    ]
+  },
+  {
+    "title": "Two Sum",
+    "difficulty": "easy",
+    "description": "Read N, N integers and target X. Print YES if two distinct elements sum to X, otherwise NO.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;int x;cin>>x;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();int x=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));const x=Number(t[pos++]);\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;int x;cin>>x;\n//code here\nunordered_set<int> seen;bool ok=false;for(int v:a){if(seen.count(x-v)){ok=true;break;}seen.insert(v);}cout<<(ok?\"YES\":\"NO\");\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();int x=sc.nextInt();\n//code here\nHashSet<Integer> seen=new HashSet<>();boolean ok=false;for(int v:a){if(seen.contains(x-v)){ok=true;break;}seen.add(v);}System.out.print(ok?\"YES\":\"NO\");\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));const x=Number(t[pos++]);\n//code here\nfunction solve(){let seen=new Set();for(const v of a){if(seen.has(x-v))return 'YES';seen.add(v);}return 'NO';}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "4\n2 7 11 15\n9",
+        "output": "YES",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "3\n1 2 3\n8",
+        "output": "NO",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "2\n3 3\n6",
+        "output": "YES",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "3\n1 2 3\n3",
+        "output": "YES"
+      },
+      {
+        "input": "3\n1 2 3\n6",
+        "output": "NO"
+      },
+      {
+        "input": "3\n1 2 3\n9",
+        "output": "NO"
+      },
+      {
+        "input": "2\n4 4\n8",
+        "output": "YES"
+      },
+      {
+        "input": "2\n4 4\n7",
+        "output": "NO"
+      },
+      {
+        "input": "4\n-2 -1 0 3\n1",
+        "output": "YES"
+      },
+      {
+        "input": "4\n2 5 8 11\n13",
+        "output": "YES"
+      },
+      {
+        "input": "4\n2 5 8 11\n20",
+        "output": "NO"
+      },
+      {
+        "input": "1\n7\n14",
+        "output": "NO"
+      },
+      {
+        "input": "5\n0 0 1 1 2\n0",
+        "output": "YES"
+      }
+    ],
+    "tags": [
+      "Hashing"
+    ]
+  },
+  {
+    "title": "Find Kth Largest Element",
+    "difficulty": "medium",
+    "description": "Read N, N integers and K (1-based). Print the Kth largest value counting duplicates.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;int k;cin>>k;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();int k=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));const k=Number(t[pos++]);\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;int k;cin>>k;\n//code here\npriority_queue<int> pq;for(int v:a)pq.push(v);for(int i=1;i<k;i++)pq.pop();cout<<pq.top();\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();int k=sc.nextInt();\n//code here\nPriorityQueue<Integer> pq=new PriorityQueue<>(Collections.reverseOrder());for(int v:a)pq.add(v);for(int i=1;i<k;i++)pq.poll();System.out.print(pq.peek());\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));const k=Number(t[pos++]);\n//code here\nfunction solve(){return String(a.slice().sort((u,v)=>v-u)[k-1]);}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "5\n3 2 1 5 4\n2",
+        "output": "4",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "4\n7 7 2 9\n2",
+        "output": "7",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "1\n-5\n1",
+        "output": "-5",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "3\n1 2 3\n1",
+        "output": "3"
+      },
+      {
+        "input": "3\n1 2 3\n2",
+        "output": "2"
+      },
+      {
+        "input": "3\n1 2 3\n3",
+        "output": "1"
+      },
+      {
+        "input": "4\n4 4 4 4\n2",
+        "output": "4"
+      },
+      {
+        "input": "4\n-1 -2 -3 -4\n1",
+        "output": "-1"
+      },
+      {
+        "input": "5\n5 2 5 1 4\n3",
+        "output": "4"
+      },
+      {
+        "input": "2\n7 9\n2",
+        "output": "7"
+      },
+      {
+        "input": "1\n10\n1",
+        "output": "10"
+      },
+      {
+        "input": "5\n0 0 0 0 0\n5",
+        "output": "0"
+      },
+      {
+        "input": "3\n-5 -1 -3\n2",
+        "output": "-3"
+      }
+    ],
+    "tags": [
+      "Heap"
+    ]
+  },
+  {
+    "title": "Valid Parentheses",
+    "difficulty": "easy",
+    "description": "Read a nonempty string containing only ()[]{}. Print YES if brackets are correctly balanced.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nstring s;cin>>s;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nString s=sc.next();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst s=t[0];\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nstring s;cin>>s;\n//code here\nstack<char> st;bool ok=true;for(char c:s){if(c=='('||c=='['||c=='{')st.push(c);else{char want=c==')'?'(':c==']'?'[':'{';if(st.empty()||st.top()!=want){ok=false;break;}st.pop();}}cout<<(ok&&st.empty()?\"YES\":\"NO\");\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nString s=sc.next();\n//code here\nArrayDeque<Character> st=new ArrayDeque<>();boolean ok=true;for(char c:s.toCharArray()){if(c=='('||c=='['||c=='{')st.push(c);else{char want=c==')'?'(':c==']'?'[':'{';if(st.isEmpty()||st.pop()!=want){ok=false;break;}}}System.out.print(ok&&st.isEmpty()?\"YES\":\"NO\");\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst s=t[0];\n//code here\nfunction solve(){let st=[];let p={')':'(',']':'[','}':'{'};for(const c of s){if('([{'.includes(c))st.push(c);else if(st.pop()!==p[c])return 'NO';}return st.length===0?'YES':'NO';}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "([])",
+        "output": "YES",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "([)]",
+        "output": "NO",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "{{}}",
+        "output": "YES",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "()",
+        "output": "YES"
+      },
+      {
+        "input": "[]",
+        "output": "YES"
+      },
+      {
+        "input": "{}",
+        "output": "YES"
+      },
+      {
+        "input": "([{}])",
+        "output": "YES"
+      },
+      {
+        "input": "((()))",
+        "output": "YES"
+      },
+      {
+        "input": "([)",
+        "output": "NO"
+      },
+      {
+        "input": "{[()]}",
+        "output": "YES"
+      },
+      {
+        "input": "(((",
+        "output": "NO"
+      },
+      {
+        "input": "())",
+        "output": "NO"
+      },
+      {
+        "input": "{[]}",
+        "output": "YES"
+      }
+    ],
+    "tags": [
+      "Stack"
+    ]
+  },
+  {
+    "title": "Maximum Sum Subarray of Size K",
+    "difficulty": "medium",
+    "description": "Read N, N integers and K. Print maximum sum of any contiguous subarray of length K.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;int k;cin>>k;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();int k=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));const k=Number(t[pos++]);\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;int k;cin>>k;\n//code here\nlong long sum=0;for(int i=0;i<k;i++)sum+=a[i];long long best=sum;for(int i=k;i<n;i++){sum+=a[i]-a[i-k];best=max(best,sum);}cout<<best;\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();int k=sc.nextInt();\n//code here\nlong sum=0;for(int i=0;i<k;i++)sum+=a[i];long best=sum;for(int i=k;i<n;i++){sum+=a[i]-a[i-k];best=Math.max(best,sum);}System.out.print(best);\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));const k=Number(t[pos++]);\n//code here\nfunction solve(){let sum=0;for(let i=0;i<k;i++)sum+=a[i];let best=sum;for(let i=k;i<a.length;i++){sum+=a[i]-a[i-k];if(sum>best)best=sum;}return String(best);}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "5\n1 2 3 4 5\n3",
+        "output": "12",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "4\n-2 -1 -5 -3\n2",
+        "output": "-3",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "3\n4 4 4\n1",
+        "output": "4",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "3\n1 2 3\n1",
+        "output": "3"
+      },
+      {
+        "input": "3\n1 2 3\n2",
+        "output": "5"
+      },
+      {
+        "input": "3\n1 2 3\n3",
+        "output": "6"
+      },
+      {
+        "input": "4\n4 1 2 3\n2",
+        "output": "5"
+      },
+      {
+        "input": "5\n-1 -2 -3 -4 -5\n3",
+        "output": "-6"
+      },
+      {
+        "input": "5\n5 4 3 2 1\n4",
+        "output": "14"
+      },
+      {
+        "input": "4\n0 0 0 0\n2",
+        "output": "0"
+      },
+      {
+        "input": "2\n9 1\n1",
+        "output": "9"
+      },
+      {
+        "input": "6\n1 1 1 1 1 1\n5",
+        "output": "5"
+      },
+      {
+        "input": "4\n-5 1 1 1\n2",
+        "output": "2"
+      }
+    ],
+    "tags": [
+      "Sliding Window"
+    ]
+  },
+  {
+    "title": "Reverse a Linked List",
+    "difficulty": "easy",
+    "description": "Read N and N node values of a singly linked list. Print values after reversing the list, separated by spaces.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;\n//code here\nfor(int i=n-1;i>=0;i--){if(i!=n-1)cout<<\" \";cout<<a[i];}\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();\n//code here\nfor(int i=n-1;i>=0;i--){if(i<n-1)System.out.print(\" \");System.out.print(a[i]);}\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));\n//code here\nfunction solve(){return a.slice().reverse().join(' ');}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "4\n1 2 3 4",
+        "output": "4 3 2 1",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "1\n8",
+        "output": "8",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "3\n5 5 2",
+        "output": "2 5 5",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "2\n1 2",
+        "output": "2 1"
+      },
+      {
+        "input": "3\n2 3 4",
+        "output": "4 3 2"
+      },
+      {
+        "input": "4\n4 3 2 1",
+        "output": "1 2 3 4"
+      },
+      {
+        "input": "1\n0",
+        "output": "0"
+      },
+      {
+        "input": "5\n1 1 2 2 3",
+        "output": "3 2 2 1 1"
+      },
+      {
+        "input": "2\n-1 1",
+        "output": "1 -1"
+      },
+      {
+        "input": "3\n0 -1 -2",
+        "output": "-2 -1 0"
+      },
+      {
+        "input": "4\n9 8 7 6",
+        "output": "6 7 8 9"
+      },
+      {
+        "input": "5\n5 4 3 2 1",
+        "output": "1 2 3 4 5"
+      },
+      {
+        "input": "6\n1 2 3 4 5 6",
+        "output": "6 5 4 3 2 1"
+      }
+    ],
+    "tags": [
+      "Linked List"
+    ]
+  },
+  {
+    "title": "Activity Selection",
+    "difficulty": "medium",
+    "description": "Read N then N lines of start and finish times. Select the maximum number of non-overlapping activities (start >= previous finish). Print the count.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<pair<int,int>> pairs(n);for(auto &p:pairs)cin>>p.first>>p.second;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[][] pairs=new int[n][2];for(int[] p:pairs){p[0]=sc.nextInt();p[1]=sc.nextInt();}\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const pairs=[];for(let i=0;i<n;i++)pairs.push([Number(t[pos++]),Number(t[pos++])]);\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<pair<int,int>> pairs(n);for(auto &p:pairs)cin>>p.first>>p.second;\n//code here\nsort(pairs.begin(),pairs.end(),[](auto u,auto v){return u.second<v.second;});int last=INT_MIN,count=0;for(auto p:pairs)if(p.first>=last){count++;last=p.second;}cout<<count;\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[][] pairs=new int[n][2];for(int[] p:pairs){p[0]=sc.nextInt();p[1]=sc.nextInt();}\n//code here\nArrays.sort(pairs,Comparator.comparingInt(p->p[1]));int last=Integer.MIN_VALUE,count=0;for(int[] p:pairs)if(p[0]>=last){count++;last=p[1];}System.out.print(count);\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const pairs=[];for(let i=0;i<n;i++)pairs.push([Number(t[pos++]),Number(t[pos++])]);\n//code here\nfunction solve(){let b=pairs.slice().sort((u,v)=>u[1]-v[1]);let last=-Infinity,count=0;for(const [st,en] of b)if(st>=last){count++;last=en;}return String(count);}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "3\n1 2\n2 3\n1 4",
+        "output": "2",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "3\n1 5\n2 6\n3 7",
+        "output": "1",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "4\n1 2\n2 3\n3 4\n4 5",
+        "output": "4",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "1\n1 2",
+        "output": "1"
+      },
+      {
+        "input": "2\n1 2\n2 3",
+        "output": "2"
+      },
+      {
+        "input": "2\n1 4\n2 5",
+        "output": "1"
+      },
+      {
+        "input": "3\n1 2\n2 3\n3 4",
+        "output": "3"
+      },
+      {
+        "input": "3\n1 5\n1 4\n1 3",
+        "output": "1"
+      },
+      {
+        "input": "4\n0 1\n1 2\n2 3\n3 4",
+        "output": "4"
+      },
+      {
+        "input": "3\n1 2\n1 2\n2 3",
+        "output": "2"
+      },
+      {
+        "input": "2\n2 3\n1 2",
+        "output": "2"
+      },
+      {
+        "input": "4\n1 2\n2 3\n3 4\n4 5",
+        "output": "4"
+      },
+      {
+        "input": "3\n0 10\n2 4\n4 6",
+        "output": "2"
+      }
+    ],
+    "tags": [
+      "Greedy"
+    ]
+  },
+  {
+    "title": "Count Connected Components",
+    "difficulty": "medium",
+    "description": "Read N M then M undirected edges (vertices numbered 1 through N). Print the number of connected components.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n,m;cin>>n>>m;vector<pair<int,int>> pairs(m);for(auto &p:pairs)cin>>p.first>>p.second;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt(),m=sc.nextInt();int[][] pairs=new int[m][2];for(int[] p:pairs){p[0]=sc.nextInt();p[1]=sc.nextInt();}\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const m=Number(t[pos++]);const pairs=[];for(let i=0;i<m;i++)pairs.push([Number(t[pos++]),Number(t[pos++])]);\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n,m;cin>>n>>m;vector<pair<int,int>> pairs(m);for(auto &p:pairs)cin>>p.first>>p.second;\n//code here\nvector<int> parent(n+1);iota(parent.begin(),parent.end(),0);auto find=[&](int v){while(parent[v]!=v){parent[v]=parent[parent[v]];v=parent[v];}return v;};for(auto p:pairs)parent[find(p.first)]=find(p.second);set<int> roots;for(int i=1;i<=n;i++)roots.insert(find(i));cout<<roots.size();\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt(),m=sc.nextInt();int[][] pairs=new int[m][2];for(int[] p:pairs){p[0]=sc.nextInt();p[1]=sc.nextInt();}\n//code here\nint[] parent=new int[n+1];for(int i=0;i<=n;i++)parent[i]=i;for(int[] p:pairs){int u=p[0],v=p[1];while(parent[u]!=u){parent[u]=parent[parent[u]];u=parent[u];}while(parent[v]!=v){parent[v]=parent[parent[v]];v=parent[v];}parent[u]=v;}HashSet<Integer> roots=new HashSet<>();for(int i=1;i<=n;i++){int v=i;while(parent[v]!=v){parent[v]=parent[parent[v]];v=parent[v];}roots.add(v);}System.out.print(roots.size());\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const m=Number(t[pos++]);const pairs=[];for(let i=0;i<m;i++)pairs.push([Number(t[pos++]),Number(t[pos++])]);\n//code here\nfunction solve(){let parent=Array.from({length:n+1},(_,i)=>i);function find(v){while(parent[v]!==v){parent[v]=parent[parent[v]];v=parent[v];}return v;}for(const [u,v] of pairs)parent[find(u)]=find(v);let roots=new Set();for(let i=1;i<=n;i++)roots.add(find(i));return String(roots.size);}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "4 2\n1 2\n3 4",
+        "output": "2",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "3 0",
+        "output": "3",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "4 3\n1 2\n2 3\n3 4",
+        "output": "1",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "1 0",
+        "output": "1"
+      },
+      {
+        "input": "2 0",
+        "output": "2"
+      },
+      {
+        "input": "3 1\n1 2",
+        "output": "2"
+      },
+      {
+        "input": "3 2\n1 2\n2 3",
+        "output": "1"
+      },
+      {
+        "input": "4 1\n1 4",
+        "output": "3"
+      },
+      {
+        "input": "5 2\n1 2\n4 5",
+        "output": "3"
+      },
+      {
+        "input": "5 4\n1 2\n2 3\n3 4\n4 5",
+        "output": "1"
+      },
+      {
+        "input": "4 2\n1 2\n2 3",
+        "output": "2"
+      },
+      {
+        "input": "2 1\n1 2",
+        "output": "1"
+      },
+      {
+        "input": "6 3\n1 2\n3 4\n5 6",
+        "output": "3"
+      }
+    ],
+    "tags": [
+      "Graph"
+    ]
+  },
+  {
+    "title": "Inorder Tree Traversal",
+    "difficulty": "easy",
+    "description": "Read N followed by N integers representing a binary tree in level order; -1 means missing node. Print inorder traversal of existing nodes separated by spaces. N is at least 1.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;vector<int> a(n);for(int &v:a)cin>>v;\n//code here\nvector<int> out;function<void(int)> walk=[&](int i){if(i>=n||a[i]==-1)return;walk(2*i+1);out.push_back(a[i]);walk(2*i+2);};walk(0);for(int i=0;i<(int)out.size();i++){if(i)cout<<\" \";cout<<out[i];}\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();int[] a=new int[n];for(int i=0;i<n;i++)a[i]=sc.nextInt();\n//code here\nArrayList<Integer> out=new ArrayList<>();class Walk{void run(int i){if(i>=n||a[i]==-1)return;run(2*i+1);out.add(a[i]);run(2*i+2);}}new Walk().run(0);for(int i=0;i<out.size();i++){if(i>0)System.out.print(\" \");System.out.print(out.get(i));}\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nlet pos=0;const n=Number(t[pos++]);const a=[];for(let i=0;i<n;i++)a.push(Number(t[pos++]));\n//code here\nfunction solve(){let out=[];function walk(i){if(i>=a.length||a[i]===-1)return;walk(2*i+1);out.push(a[i]);walk(2*i+2);}walk(0);return out.join(' ');}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "7\n1 2 3 4 5 6 7",
+        "output": "4 2 5 1 6 3 7",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "3\n1 -1 2",
+        "output": "1 2",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "1\n9",
+        "output": "9",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "3\n1 2 3",
+        "output": "2 1 3"
+      },
+      {
+        "input": "3\n2 1 3",
+        "output": "1 2 3"
+      },
+      {
+        "input": "7\n5 3 7 2 4 6 8",
+        "output": "2 3 4 5 6 7 8"
+      },
+      {
+        "input": "1\n1",
+        "output": "1"
+      },
+      {
+        "input": "3\n1 2 -1",
+        "output": "2 1"
+      },
+      {
+        "input": "3\n1 -1 2",
+        "output": "1 2"
+      },
+      {
+        "input": "7\n1 2 3 -1 4 -1 5",
+        "output": "2 4 1 3 5"
+      },
+      {
+        "input": "7\n10 5 15 3 7 12 18",
+        "output": "3 5 7 10 12 15 18"
+      },
+      {
+        "input": "3\n0 -1 1",
+        "output": "0 1"
+      },
+      {
+        "input": "7\n4 2 6 1 3 5 7",
+        "output": "1 2 3 4 5 6 7"
+      }
+    ],
+    "tags": [
+      "Tree"
+    ]
+  },
+  {
+    "title": "Climbing Stairs",
+    "difficulty": "easy",
+    "description": "Read N (1 <= N <= 40). Count ways to climb N stairs taking 1 or 2 steps at a time.",
+    "startCode": [
+      {
+        "language": "C++",
+        "initialCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;\n//code here\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "initialCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();\n//code here\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "initialCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst n=Number(t[0]);\n//code here"
+      }
+    ],
+    "referenceSolution": [
+      {
+        "language": "C++",
+        "completeCode": "#include <iostream>\n#include <bits/stdc++.h>\nusing namespace std;\nint main(){\nint n;cin>>n;\n//code here\nlong long u=1,v=1;for(int i=1;i<=n;i++){long long w=u+v;u=v;v=w;}cout<<u;\nreturn 0;\n}"
+      },
+      {
+        "language": "Java",
+        "completeCode": "import java.util.*;\npublic class Main{public static void main(String[] args){Scanner sc=new Scanner(System.in);\nint n=sc.nextInt();\n//code here\nlong u=1,v=1;for(int i=1;i<=n;i++){long w=u+v;u=v;v=w;}System.out.print(u);\n}}"
+      },
+      {
+        "language": "JavaScript",
+        "completeCode": "const fs=require('fs');const t=fs.readFileSync(0,'utf8').trim().split(/\\s+/);\nconst n=Number(t[0]);\n//code here\nfunction solve(){let u=1,v=1;for(let i=1;i<=n;i++){let w=u+v;u=v;v=w;}return String(u);}\nconsole.log(solve());"
+      }
+    ],
+    "visibleTestCases": [
+      {
+        "input": "2",
+        "output": "2",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "3",
+        "output": "3",
+        "explanation": "Expected output for the given input."
+      },
+      {
+        "input": "5",
+        "output": "8",
+        "explanation": "Expected output for the given input."
+      }
+    ],
+    "hiddenTestCases": [
+      {
+        "input": "1",
+        "output": "1"
+      },
+      {
+        "input": "4",
+        "output": "5"
+      },
+      {
+        "input": "6",
+        "output": "13"
+      },
+      {
+        "input": "7",
+        "output": "21"
+      },
+      {
+        "input": "8",
+        "output": "34"
+      },
+      {
+        "input": "9",
+        "output": "55"
+      },
+      {
+        "input": "10",
+        "output": "89"
+      },
+      {
+        "input": "15",
+        "output": "987"
+      },
+      {
+        "input": "20",
+        "output": "10946"
+      },
+      {
+        "input": "30",
+        "output": "1346269"
+      }
+    ],
+    "tags": [
+      "Dynamic Programming"
+    ]
+  }
+]
